@@ -6,3 +6,11 @@ body,
       h5 {
         font-family: "Raleway", sans-serif;
       }
+
+.register {
+  margin-top: 120px;
+}
+
+.events-handler{
+  margin-top: 100px;
+}
