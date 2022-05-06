@@ -2,12 +2,16 @@
 <html>
 
 <head>
-    <title><?php echo "Title"; ?></title>
+    <title>Title</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="plugins/CSS/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
     <link rel="" href="style.css" />
+    <?php
+    require('database/function.php');
+    ?>
+
 </head>
 
 <body class="w3-light-grey">
@@ -22,6 +26,7 @@
             </div>
         </div>
     </div>
+
     <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width: 1400px">
@@ -30,68 +35,43 @@ and is wrapped around the whole page content, except for the footer in this exam
             <h1><b>CPD Scoreboard</b></h1>
             <p>Welcome to the Scoreboard of <span class="w3-tag">CPD</span></p>
         </header>
-
+        <?php
+        $product_shuffle = getData();
+        ?>
         <!-- Grid -->
         <div class="w3-row">
             <!-- Blog entries -->
             <div class="w3-col 20 s12">
                 <!-- Blog entry -->
-                <div class="w3-card-4 w3-margin w3-white">
-                    <img src="w3images/woods.png" alt="Nature" style="width: 100%" />
-                    <div class="w3-container">
-                        <h3>
-                            <b>Week 1 contest</b>
-                        </h3>
-                        <h5>
-                            Andalus Division, <span class="w3-opacity">April 7, 2022</span>
-                        </h5>
-                    </div>
+                <?php foreach ($product_shuffle as $item) { ?>
+                    <div class="w3-card-4 w3-margin w3-white">
+                        <img src="<?php echo $item['event_image']; ?>" alt="Nature" style="width: 100%" />
+                        <div class="w3-container">
+                            <h3>
+                                <b><?php echo $item['event_id']; ?></b>
+                            </h3>
+                            <h5>
+                                <?php echo $item['event_title']; ?>, <span class="w3-opacity"><?php echo $item['event_addDate'] ?></span>
+                            </h5>
+                        </div>
 
-                    <div class="w3-container">
-                        <p>
-                            🥇 Andalus <br />
-                            🥈 Bug-Hunters<br />
-                            🥉 Sansolvers
-                        </p>
-                        <div class="w3-row">
-                            <div class="w3-col m8 s12">
-                                <p>
-                                    <button class="w3-button w3-padding-large w3-white w3-border">
-                                        <b>👍</b>
-                                    </button>
-                                </p>
+                        <div class="w3-container">
+                            <p>
+                                <?php echo $item['event_description'] ?>
+                            </p>
+                            <div class="w3-row">
+                                <div class="w3-col m8 s12">
+                                    <p>
+                                        <button class="w3-button w3-padding-large w3-white w3-border">
+                                            <b>👍</b>
+                                        </button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <hr />
-
-                <!-- Blog entry -->
-                <div class="w3-card-4 w3-margin w3-white">
-                    <img src="w3images/bridge.png" alt="Norway" style="width: 100%" />
-                    <div class="w3-container">
-                        <h3><b>Week 2 contest</b></h3>
-                        <h5>Division 1, <span class="w3-opacity">April 2, 2022</span></h5>
-                    </div>
-
-                    <div class="w3-container">
-                        <p>
-                            🥇 Abebe zerihun <br />
-                            🥈 Birhanu Aseffa<br />
-                            🥉 Samrawit Kebede
-                        </p>
-                        <div class="w3-row">
-                            <div class="w3-col m8 s12">
-                                <p>
-                                    <button class="w3-button w3-padding-large w3-white w3-border">
-                                        <b>👍</b>
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END BLOG ENTRIES -->
+                    <hr />
+                <?php } ?>
             </div>
 
             <!-- Introduction menu -->
