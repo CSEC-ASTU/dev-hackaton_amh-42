@@ -17,16 +17,16 @@
 <body class="hold-transition register-page">
   <div class="register-box">
     <div class="register-logo">
-      <a href="../../index2.html"><b>CSEC_ASTU</b></a>
+      <a href="scoreboard.php"><b>CSEC_ASTU</b></a>
     </div>
 
     <div class="card">
       <div class="card-body register-card-body">
         <p class="login-box-msg">Register a new membership</p>
 
-        <form action="scoreboard.php" method="post">
+        <form action="register_approval.php" method="post">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Full name" />
+            <input type="text" class="form-control" placeholder="Full name" name="name" />
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email" />
+            <input type="email" class="form-control" placeholder="Email" name="email" />
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" />
+            <input type="password" class="form-control" placeholder="Password" name="password" />
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -50,15 +50,15 @@
             </div>
           </div>
           <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1" name="dev">
             <label for="customCheckbox1" class="custom-control-label">Dev</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option1">
+            <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option1" name="cpd">
             <label for="customCheckbox2" class="custom-control-label">CPD</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option1">
+            <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option1" name="cbd">
             <label for="customCheckbox3" class="custom-control-label">CBD</label>
           </div>
           <div class="row">
