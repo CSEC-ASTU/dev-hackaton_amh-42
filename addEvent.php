@@ -26,9 +26,7 @@
     </div>
     <!-- Add Event -->
     <div class="register">
-        <form action="<?php
-                        require('handleEvent.php');
-                        ?>" method="POST">
+        <form action="" method="POST" autocomplete="off">
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Event id</label>

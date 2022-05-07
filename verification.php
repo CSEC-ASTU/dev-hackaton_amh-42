@@ -2,7 +2,7 @@
 <?php
 include('database/DBConnector.php');
 $con = connect_db();
-
+session_start();
 $email = $_POST["email"];
 $pass = $_POST["pass"];
 $sql = "SELECT password, level FROM user WHERE email = '$email'";
@@ -14,6 +14,9 @@ $level = $row['level'];
 if ($new_pass == $pass) {
     if ($level == 'admin') {
         echo 'Successfully Logged in <br><a href="Admin.php">Admin Dashboard</a><br><a href="scoreboard.php">Main Page</a>';
+        $_SESSION["user"] = $email;
+        $_SESSION["role"] = 'admin';
+        header('location:Admin.php');
     } else {
         echo 'Successfully Logged in <a href="Scoreboard.php">Click Here</a>';
     }
