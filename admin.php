@@ -35,19 +35,19 @@
         <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
         <div class="w3-row-padding w3-center">
             <div class="w3-col m3">
-                <a href="addEvent.html">
+                <a href="addEvent.php">
                     <img src="w3images/create event.png" style="width: 100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains" />
                 </a>
             </div>
 
             <div class="w3-col m3">
-                <a href="club.html">
+                <a href="club.php">
                     <img src="w3images/Club Information.png" style="width: 100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans" />
                 </a>
             </div>
 
             <div class="w3-col m3">
-                <img src="w3images/Promote users.png" style="width: 100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup" />
+                <a href="users.php"><img src="w3images/Promote users.png" style="width: 100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup" /></a>
             </div>
 
             <div class="w3-col m3">
