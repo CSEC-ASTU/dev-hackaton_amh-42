@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="plugins/CSS/w3.css" />
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="plugins/dist/css/adminlte.min.css" />
-
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,15 +24,19 @@
             </div>
         </div>
     </div>
-
     <!-- Add Event -->
-
     <div class="register">
-        <form>
+        <form action="<?php
+                        require('handleEvent.php');
+                        ?>" method="POST">
             <div class="card-body">
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Event id</label>
+                    <input type="text" class="form-control" id="Eventid" placeholder="Enter Event id" />
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Event Title</label>
-                    <input type="email" class="form-control" id="EventTitle" placeholder="Enter Event Title" />
+                    <input type="text" class="form-control" id="EventTitle" placeholder="Enter Event Title" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Event Description</label>
@@ -54,6 +57,7 @@
                 <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
                     <option>CPD</option>
                     <option>Dev</option>
+                    <option>CBD</option>
                 </select>
                 <!-- /.card-body -->
                 <div class="card-footer">

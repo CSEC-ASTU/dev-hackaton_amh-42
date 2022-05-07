@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="plugins/CSS/w3.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="plugins/dist/css/adminlte.min.css" />
 </head>
 
 <body>
@@ -27,21 +29,64 @@
     <div class="profile">
         <div class="w3-third w3-margin-bottom">
             <img src="w3images/CBD.png" alt="New York" style="width: 100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-                <p><b>Anwar Misbah</b></p>
-                <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
-                    <option>Standard User</option>
-                    <option>President</option>
-                    <option>V/president</option>
-                    <option>CPD Head</option>
-                    <option>Dev Head</option>
-                    <option>CBD Head</option>
-                </select>
-                <br><br>
-                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">
-                    Save
-                </button>
-            </div>
+            <form action="handleEvent.php">
+                <div class="w3-container w3-white">
+                    <p><b>Anwar Misbah</b></p>
+                    <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
+                        <option>Standard User</option>
+                        <option>Member</option>
+                        <option>President</option>
+                        <option>V/president</option>
+                        <option>CPD Head</option>
+                        <option>Dev Head</option>
+                        <option>CBD Head</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="save" value="Save" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="w3-third w3-margin-bottom">
+            <img src="w3images/CBD.png" alt="New York" style="width: 100%" class="w3-hover-opacity">
+            <form action="handleEvent.php">
+                <div class="w3-container w3-white">
+                    <p><b>Anwar Misbah</b></p>
+                    <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
+                        <option>Standard User</option>
+                        <option>Member</option>
+                        <option>President</option>
+                        <option>V/president</option>
+                        <option>CPD Head</option>
+                        <option>Dev Head</option>
+                        <option>CBD Head</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="save" value="Save" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="w3-third w3-margin-bottom">
+            <img src="w3images/CBD.png" alt="New York" style="width: 100%" class="w3-hover-opacity">
+            <form action="handleEvent.php">
+                <div class="w3-container w3-white">
+                    <p><b>Anwar Misbah</b></p>
+                    <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
+                        <option>Standard User</option>
+                        <option>Member</option>
+                        <option>President</option>
+                        <option>V/president</option>
+                        <option>CPD Head</option>
+                        <option>Dev Head</option>
+                        <option>CBD Head</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="save" value="Save" class="btn btn-primary">
+                </div>
+            </form>
         </div>
     </div>
 </body>

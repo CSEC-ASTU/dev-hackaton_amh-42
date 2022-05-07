@@ -2,12 +2,13 @@
 <html>
 
 <head>
-    <title>Title</title>
+    <title>Scoreboard</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="plugins/CSS/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-    <link rel="" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="w3images/Dev.png">
     <?php
     require('database/function.php');
     ?>
@@ -20,9 +21,9 @@
             <a href="#home" class="w3-bar-item w3-button"><b>CSEC</b> ASTU</a>
             <!-- Float links to the right. Hide them on small screens -->
             <div class="w3-right w3-hide-small">
-                <a href="Scoreboard.html" class="w3-bar-item w3-button">CPD</a>
-                <a href="Leaderboard.html" class="w3-bar-item w3-button">Dev</a>
-                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+                <a href="Scoreboard.php" class="w3-bar-item w3-button">CPD</a>
+                <a href="Leaderboard.php" class="w3-bar-item w3-button">Dev</a>
+                <a href="register.php" class="w3-bar-item w3-button">Register</a>
             </div>
         </div>
     </div>
@@ -48,7 +49,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <img src="<?php echo $item['event_image']; ?>" alt="Nature" style="width: 100%" />
                         <div class="w3-container">
                             <h3>
-                                <b><?php echo $item['event_id']; ?></b>
+                                <b>Week <?php echo $item['event_id']; ?></b>
                             </h3>
                             <h5>
                                 <?php echo $item['event_title']; ?>, <span class="w3-opacity"><?php echo $item['event_addDate'] ?></span>
