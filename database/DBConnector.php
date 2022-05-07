@@ -7,5 +7,5 @@ function connect_db()
     $database = "csec_astu";
     $con = mysqli_connect($host, $user, $password, $database);
     if ($con->connect_error) return "Fail" . $con->connect_error;
-    return "Successfully Connected!";
+    return $con;
 }
