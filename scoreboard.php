@@ -23,7 +23,7 @@
             <a href="#home" class="w3-bar-item w3-button"><b>CSEC</b> ASTU</a>
             <!-- Float links to the right. Hide them on small screens -->
             <div class="w3-right w3-hide-small">
-                <a href="Scoreboard.php" class="w3-bar-item w3-button">CPD</a>
+                <a href="Scoreboard.php?time=all" class="w3-bar-item w3-button">CPD</a>
                 <a href="Leaderboard.php" class="w3-bar-item w3-button">Dev</a>
                 <a href="register.php" class="w3-bar-item w3-button">Register</a>
             </div>
@@ -42,14 +42,14 @@ and is wrapped around the whole page content, except for the footer in this exam
             <div class="dropdown" style="margin-left: 90%;">
                 <button class="dropbtn">Filter Date</button>
                 <div class="dropdown-content">
-                    <a href="#">All</a>
-                    <a href="#">Last Week</a>
-                    <a href="#">Last Month</a>
-                    <a href="#">This Month</a>
+                    <a href="scoreboard.php?time=all">All</a>
+                    <a href="scoreboard.php?time=last_week">Last Week</a>
+                    <a href="scoreboard.php?time=last_month">Last Month</a>
+                    <a href="scoreboard.php?time=this_month">This Month</a>
                 </div>
             </div>
             <?php
-            $product_shuffle = getData('cpd_sb');
+            $product_shuffle = getSpecificData($_GET['time']);
             ?>
             <!-- Grid -->
             <div class="w3-row">
