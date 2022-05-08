@@ -2,4 +2,4 @@
 
 require('database/Event.php');
 
-getData();
+getData('cpd_sb');

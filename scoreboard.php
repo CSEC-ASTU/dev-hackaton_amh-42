@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="plugins/CSS/w3.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="plugins/dist/css/adminlte.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="custom.css">
     <link rel="shortcut icon" href="w3images/Dev.png">
     <?php
     require('database/function.php');
@@ -30,58 +32,71 @@
 
     <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
-    <div class="w3-content" style="max-width: 1400px">
-        <!-- Header -->
-        <header class="w3-container w3-center w3-padding-32">
-            <h1><b>CPD Scoreboard</b></h1>
-            <p>Welcome to the Scoreboard of <span class="w3-tag">CPD</span></p>
-        </header>
-        <?php
-        $product_shuffle = getData();
-        ?>
-        <!-- Grid -->
-        <div class="w3-row">
-            <!-- Blog entries -->
-            <div class="w3-col 20 s12">
-                <!-- Blog entry -->
-                <?php foreach ($product_shuffle as $item) { ?>
-                    <div class="w3-card-4 w3-margin w3-white">
-                        <img src="<?php echo $item['event_image']; ?>" alt="Nature" style="width: 100%" />
-                        <div class="w3-container">
-                            <h3>
-                                <b>Week <?php echo $item['event_id']; ?></b>
-                            </h3>
-                            <h5>
-                                <?php echo $item['event_title']; ?>, <span class="w3-opacity"><?php echo $item['event_addDate'] ?></span>
-                            </h5>
-                        </div>
-
-                        <div class="w3-container">
-                            <p>
-                                <?php echo $item['event_description'] ?>
-                            </p>
-                            <div class="w3-row">
-                                <div class="w3-col m8 s12">
-                                    <p>
-                                        <button class="w3-button w3-padding-large w3-white w3-border">
-                                            <b>👍</b>
-                                        </button>
-                                    </p>
+    <div class="scoreboard">
+        <div class="w3-content" style="max-width: 1400px">
+            <!-- Header -->
+            <header class="w3-container w3-center w3-padding-32">
+                <h1><b>CPD Scoreboard</b></h1>
+                <p>Welcome to the Scoreboard of <span class="w3-tag">CPD</span></p>
+            </header>
+            <div class="dropdown" style="margin-left: 90%;">
+                <button class="dropbtn">Filter Date</button>
+                <div class="dropdown-content">
+                    <a href="#">All</a>
+                    <a href="#">Last Week</a>
+                    <a href="#">Last Month</a>
+                    <a href="#">This Month</a>
+                </div>
+            </div>
+            <?php
+            $product_shuffle = getData('cpd_sb');
+            ?>
+            <!-- Grid -->
+            <div class="w3-row">
+                <!-- Blog entries -->
+                <div class="w3-col 20 s12">
+                    <!-- Blog entry -->
+                    <?php foreach ($product_shuffle as $item) { ?>
+                        <div class="w3-card-4 w3-margin w3-white">
+                            <img src="<?php echo $item['contest_image']; ?>" alt="Nature" style="width: 100%" />
+                            <div class="w3-container">
+                                <h3>
+                                    <b><?php echo $item['contest_week']; ?></b>
+                                </h3>
+                                <h5>
+                                    <?php echo $item['contest_division']; ?>, <span class="w3-opacity"><?php echo $item['contest_Date'] ?></span>
+                                </h5>
+                            </div>
+                            <div class="w3-container">
+                                <p>
+                                    🥇<?php echo $item['contest_1st'] ?>
+                                </p>
+                                <p>
+                                    🥈<?php echo $item['contest_2nd'] ?>
+                                </p>
+                                <p>
+                                    🥉<?php echo $item['contest_3rd'] ?>
+                                </p>
+                                <div class="w3-row">
+                                    <div class="w3-col m8 s12">
+                                        <p>
+                                            <button class="w3-button w3-padding-large w3-white w3-border">
+                                                <b>👍</b>
+                                            </button>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <hr />
-                <?php } ?>
+                        <hr />
+                    <?php } ?>
+                </div>
+                <!-- Introduction menu -->
+                <!-- END GRID -->
             </div>
-
-            <!-- Introduction menu -->
-
-            <!-- END GRID -->
+            <br />
+            <!-- END w3-content -->
         </div>
-        <br />
-
-        <!-- END w3-content -->
     </div>
 
     <!-- Footer -->
@@ -97,6 +112,7 @@ and is wrapped around the whole page content, except for the footer in this exam
             <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">AMH-42</a>
         </p>
     </footer>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
