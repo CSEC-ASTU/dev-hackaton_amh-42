@@ -25,7 +25,7 @@ if ($_SESSION['role'] == 'admin') {
                 <div class="w3-right w3-hide-small">
                     <a href="Scoreboard.html" class="w3-bar-item w3-button">CPD</a>
                     <a href="Leaderboard.html" class="w3-bar-item w3-button">Dev</a>
-                    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+                    <a href="logout.php" class="w3-bar-item w3-button"> Logout</a>;
                 </div>
             </div>
         </div>

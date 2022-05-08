@@ -26,25 +26,22 @@
     </div>
     <!-- Add Event -->
     <div class="register">
-        <form action="" method="POST" autocomplete="off">
+        <form action="sb_add.php" method="POST" autocomplete="off">
             <div class="card-body">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Contest id</label>
-                    <input type="text" class="form-control" id="Eventid" placeholder="Enter Contest id" />
-                </div>
+
                 <div class="form-group">
                     <label for="exampleInputEmail1">Contest Week</label>
-                    <input type="text" class="form-control" id="EventTitle" placeholder="Enter Contest Week" />
+                    <input type="text" class="form-control" id="EventTitle" placeholder="Enter Contest Week" name="week" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Contest Division</label>
-                    <input type="text" class="form-control" id="EventDescription" placeholder="Division" />
+                    <input type="text" class="form-control" id="EventDescription" placeholder="Division" name="division" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Choose Image</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="InputeImage" />
+                            <input type="file" class="custom-file-input" id="InputeImage" name="image" />
                             <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                         </div>
                         <div class="input-group-append">
@@ -62,7 +59,7 @@
 
                 ?>
                 <label for="1st">1st Place</label>
-                <select class="custom-select form-control-border border-width-2" id="1st" onclick="">
+                <select class="custom-select form-control-border border-width-2" id="1st" name="first">
                     <?php
                     $result = mysqli_query($con, $sql);
 
@@ -71,7 +68,7 @@
                         <option><?php echo $row["full_name"]; ?></option><?php } ?>
                 </select>
                 <label for="1st">2nd Place</label>
-                <select class="custom-select form-control-border border-width-2" id="2nd" onclick="">
+                <select class="custom-select form-control-border border-width-2" id="2nd" name="second">
                     <?php
                     $result = mysqli_query($con, $sql);
 
@@ -80,7 +77,7 @@
                         <option><?php echo $row["full_name"]; ?></option><?php } ?>
                 </select>
                 <label for="1st">3rd Place</label>
-                <select class="custom-select form-control-border border-width-2" id="3rd" onclick="">
+                <select class="custom-select form-control-border border-width-2" id="3rd" name="third">
                     <?php
                     $result = mysqli_query($con, $sql);
 
