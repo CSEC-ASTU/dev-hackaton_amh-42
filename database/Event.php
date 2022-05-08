@@ -29,12 +29,25 @@ function newEvent($sql = "INSERT INTO event values(event_id = 1, event_title = '
     mysqli_query($con, $sql);
 }
 
-function getSpecificData($begin, $end)
+function getSpecificData($time)
 {
-    global $host, $user, $password, $database;
+    if ($time == 'last_week') {
+        $lastWeek = date("Y-m-d", strtotime("-7 days"));
+        $now = date("Y-m-d", strtotime("+1 day"));
+    } elseif ($time == 'last_month') {
+        $lastWeek = date("Y-m-d", strtotime("-60 days"));
+        $now = date("Y-m-d", strtotime("-30 day"));
+    } elseif ($time == 'this_month') {
+        $lastWeek = date("Y-m-d", strtotime("-30 days"));
+        $now = date("Y-m-d", strtotime("+1 day"));
+    } else {
+        $lastWeek = date("Y-m-d", strtotime("-7 days"));
+        $now = date("Y-m-d", strtotime("+1 day"));
+    }
 
+    global $host, $user, $password, $database;
     $con = mysqli_connect($host, $user, $password, $database);
-    $sql = "SELECT * FROM cpd_sb WHERE contest_Date >= $begin AND contest_Date<=$end ;";
+    $sql = "SELECT * FROM cpd_sb WHERE contest_Date >= '$lastWeek' AND contest_Date<= '$now' ";
 
     $result = mysqli_query($con, $sql);
     $resultArray = array();
