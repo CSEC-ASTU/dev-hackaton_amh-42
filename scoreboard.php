@@ -16,6 +16,9 @@
     ?>
 
 </head>
+<?php
+
+session_start(); ?>
 
 <body class="w3-light-grey">
     <div class="w3-top">
@@ -25,7 +28,10 @@
             <div class="w3-right w3-hide-small">
                 <a href="Scoreboard.php?time=all" class="w3-bar-item w3-button">CPD</a>
                 <a href="Leaderboard.php" class="w3-bar-item w3-button">Dev</a>
-                <a href="register.php" class="w3-bar-item w3-button">Register</a>
+                <a href="Logout.php" class="w3-bar-item w3-button"><?php
+                                                                    if ($_SESSION['role'] == 'admin' or $_SESSION['role'] = 'standard') echo "Logout";
+                                                                    else echo "Login";
+                                                                    ?></a>
             </div>
         </div>
     </div>

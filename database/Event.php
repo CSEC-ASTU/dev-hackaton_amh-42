@@ -41,7 +41,7 @@ function getSpecificData($time)
         $lastWeek = date("Y-m-d", strtotime("-30 days"));
         $now = date("Y-m-d", strtotime("+1 day"));
     } else {
-        $lastWeek = date("Y-m-d", strtotime("-7 days"));
+        $lastWeek = date("Y-m-d", strtotime("-1000000 days"));
         $now = date("Y-m-d", strtotime("+1 day"));
     }
 

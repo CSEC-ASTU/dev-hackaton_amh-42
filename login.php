@@ -56,6 +56,9 @@
         <p class="mb-0">
           <a href="register.php" class="text-center">Register a new membership</a>
         </p>
+        <p class="mb-0">
+          <a href="scoreboard.php?time=all" class="text-center">continue without login</a>
+        </p>
       </div>
       <!-- /.login-card-body -->
     </div>

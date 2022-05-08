@@ -54,9 +54,6 @@
                 include('database/DBConnector.php');
                 $con = connect_db();
                 $sql = "SELECT * FROM division_members WHERE division_id = 2";
-                $resultArray = array();
-
-
                 ?>
                 <label for="1st">1st Place</label>
                 <select class="custom-select form-control-border border-width-2" id="1st" name="first">

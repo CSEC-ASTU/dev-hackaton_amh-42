@@ -13,11 +13,12 @@ $new_pass = $row['password'];
 $level = $row['level'];
 if ($new_pass == $pass) {
     if ($level == 'admin') {
-        echo 'Successfully Logged in <br><a href="Admin.php">Admin Dashboard</a><br><a href="scoreboard.php">Main Page</a>';
         $_SESSION["user"] = $email;
         $_SESSION["role"] = 'admin';
         header('location:Admin.php');
     } else {
-        echo 'Successfully Logged in <a href="Scoreboard.php">Click Here</a>';
+        $_SESSION["user"] = $email;
+        $_SESSION["role"] = 'standard';
+        header('location:Scoreboard.php?time=all');
     }
 } else echo "Wrong Password";

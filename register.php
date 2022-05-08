@@ -50,16 +50,28 @@
             </div>
           </div>
           <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1" name="dev">
+            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="dev" name="dev">
             <label for="customCheckbox1" class="custom-control-label">Dev</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option1" name="cpd">
+            <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="cpd" name="cpd">
             <label for="customCheckbox2" class="custom-control-label">CPD</label>
           </div>
           <div class="custom-control custom-checkbox">
-            <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option1" name="cbd">
+            <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="cbd" name="cbd">
             <label for="customCheckbox3" class="custom-control-label">CBD</label>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">Choose Image</label>
+            <div class="input-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" name="image" />
+                <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
+              </div>
+              <div class="input-group-append">
+                <span class="input-group-text">Upload</span>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="col-4">

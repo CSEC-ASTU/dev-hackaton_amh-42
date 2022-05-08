@@ -26,25 +26,21 @@
     </div>
     <!-- Add Event -->
     <div class="register">
-        <form action="" method="POST" autocomplete="off">
+        <form action="event_add.php" method="POST" autocomplete="off">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Event id</label>
-                    <input type="text" class="form-control" id="Eventid" placeholder="Enter Event id" />
-                </div>
-                <div class="form-group">
                     <label for="exampleInputEmail1">Event Title</label>
-                    <input type="text" class="form-control" id="EventTitle" placeholder="Enter Event Title" />
+                    <input type="text" class="form-control" id="EventTitle" placeholder="Enter Event Title" name="title" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Event Description</label>
-                    <input type="text" class="form-control" id="EventDescription" placeholder="Description" />
+                    <input type="text" class="form-control" id="EventDescription" placeholder="Description" name="description" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Choose Image</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="InputeImage" />
+                            <input type="file" class="custom-file-input" name="image" />
                             <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                         </div>
                         <div class="input-group-append">
@@ -52,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2">
+                <select class="custom-select form-control-border border-width-2" name="division">
                     <option>CPD</option>
                     <option>Dev</option>
                     <option>CBD</option>

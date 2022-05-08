@@ -13,4 +13,4 @@ $third = $_POST['third'];
 $sql = "INSERT INTO cpd_sb  (contest_week,contest_division,contest_image,contest_1st,contest_2nd,contest_3rd) values('$week', '$division', '$image', '$first', '$second', '$third')";
 
 if (mysqli_query($con, $sql)) echo "Successfully Inserted!!";
-else echo "Failed";;
+else echo "Failed";
